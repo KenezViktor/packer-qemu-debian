@@ -11,14 +11,15 @@ source "qemu" "bookworm" {
     net_device = "virtio-net"
     disk_interface= "virtio"
     ssh_username = "root"
-    ssh_password = "password"
+    ssh_password = "${var.password}"
+    ssh_timeout = "30m"
     boot_wait = "0s"
     boot_command = [
         "<wait><wait><wait><esc><wait><wait><wait>",
         "/install.amd/vmlinuz ",
         "initrd=/install.amd/initrd.gz ",
         "auto=true ",
-        "hostname=${var.vm_name}",
+        "hostname=${var.vm_name} ",
         "domain= ",
         "url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/${var.preseed_file} ",
         "interface=auto ",
