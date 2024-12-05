@@ -11,8 +11,10 @@ source "qemu" "bookworm" {
     net_device = "virtio-net"
     disk_interface= "virtio"
     ssh_username = "root"
-    ssh_password = "${var.password}"
-    ssh_timeout = "30m"
+    #ssh_password = "${var.password}"
+    ssh_clear_authorized_keys = true
+    ssh_private_key_file = "${var.ssh_private_key_file}"
+    ssh_timeout = "60m"
     boot_wait = "0s"
     boot_command = [
         "<wait><wait><wait><esc><wait><wait><wait>",
