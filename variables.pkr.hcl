@@ -26,9 +26,9 @@ variable "vm_name" {
     default = "bookworm-packer"
 }
 
-variable "passwd" {
+variable "password" {
     type = string
-    default = "/nEK8sernWlSk"
+    default = "password"
 }
 
 variable "output_directory" {
@@ -38,36 +38,5 @@ variable "output_directory" {
 
 variable "preseed_file" {
     type = string
-    default = "http/preseed.conf"
-}
-
-# preseed vars
-variable "language" {
-    type = string
-    default = "en"
-}
-
-variable "country" {
-    type = string
-    default = "HU"
-}
-
-variable "locale" {
-    type = string
-    default = "hu_HU.UTF-8"
-}
-
-variable "keyboard" {
-    type = string
-    default = "hu"
-}
-
-variable "timezone" {
-    type = string
-    default = "UTC"
-}
-
-variable "system_clock_in_utc" {
-    type = string
-    default = "true"
+    default = "preseed.conf"
 }
