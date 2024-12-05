@@ -40,3 +40,8 @@ variable "preseed_file" {
     type = string
     default = "preseed.conf"
 }
+
+variable "ssh_private_key_file" {
+    type = string
+    default = "~/.ssh/packer_key"
+}
