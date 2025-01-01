@@ -34,3 +34,5 @@ Run the following in the git repo
 ```
 packer build .
 ```
+
+Before build, don't forget to change ssh pubkey in the ```http/preseed.conf``` file
