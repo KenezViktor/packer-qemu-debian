@@ -8,12 +8,13 @@ variable "" {
 # build specific vars
 variable "iso_url" {
     type = string
-    default = "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.8.0-amd64-netinst.iso"
+#    default = "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.8.0-amd64-netinst.iso"
+    default = "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.3.0-amd64-netinst.iso"
 }
 
 variable "iso_checksum" {
     type = string
-    default = "04396d12b0f377958a070c38a923c227832fa3b3e18ddc013936ecf492e9fbb3"
+    default = "c9f09d24b7e834e6834f2ffa565b33d6f1f540d04bd25c79ad9953bc79a8ac02"
 }
 
 variable "disk_size" {
@@ -23,7 +24,7 @@ variable "disk_size" {
 
 variable "vm_name" {
     type = string
-    default = "bookworm-packer"
+    default = "trixie-packer"
 }
 
 variable "password" {
@@ -43,5 +44,5 @@ variable "preseed_file" {
 
 variable "ssh_private_key_file" {
     type = string
-    default = "~/.ssh/packer_key"
+    default = "~/.ssh/id_rsa"
 }

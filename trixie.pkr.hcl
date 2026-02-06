@@ -1,4 +1,4 @@
-source "qemu" "bookworm" {
+source "qemu" "trixie" {
     iso_url = "${var.iso_url}"
     iso_checksum = "${var.iso_checksum}"
     output_directory = "${var.output_directory}"
@@ -33,5 +33,5 @@ source "qemu" "bookworm" {
 }
 
 build {
-    sources = ["source.qemu.bookworm"]
+    sources = ["source.qemu.trixie"]
 }
