@@ -1,6 +1,6 @@
 # packer-qemu-debian
 
-Builds a Debian Bookworm image
+Builds a Debian Trixie image
 
 ## Install Packer - for Debian
 
